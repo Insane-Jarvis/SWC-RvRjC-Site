@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Wellness Centre - Gallery</title>
+    <link rel="stylesheet" href="../styles/nav_styles.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Overpass", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        overflow: auto;
+        background-color: #f1e9e9;
+      }
+      .content {
+        width: 100%;
+        /* height: 100vh; */
+        padding: 20px;
+        background-color: lightgray;
+      }
+
+      .section-header {
+        text-align: center;
+        margin: 60px auto 20px auto;
+        font-family: "Montserrat", sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #222;
+      }
+
+      .section-header:first-of-type {
+        margin-top: 10px !important;
+      }
+
+      .section-header-underline {
+        border: 1px solid #222;
+        width: 3rem;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+
+      .video-gallery {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1000px;
+        text-align: center;
+      }
+
+      .video-gallery .gallery-item {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        min-width: 320px;
+        max-width: 580px;
+        max-height: 360px;
+        width: 48%;
+        background: #000;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .video-gallery .gallery-item img {
+        position: relative;
+        display: block;
+        opacity: 0.45;
+        width: 105%;
+        height: 300px;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: translate3d(-23px, 0, 0);
+        backface-visibility: hidden;
+      }
+
+      .video-gallery .gallery-item .gallery-item-caption {
+        padding: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.25em;
+      }
+
+      .video-gallery .gallery-item .gallery-item-caption,
+      .video-gallery .gallery-item .gallery-item-caption > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .video-gallery .gallery-item h2 {
+        font-weight: 300;
+        overflow: hidden;
+        padding: 0.5em 0;
+      }
+
+      .video-gallery .gallery-item h2,
+      .video-gallery .gallery-item p {
+        position: relative;
+        margin: 0;
+        z-index: 10;
+      }
+
+      .video-gallery .gallery-item p {
+        letter-spacing: 1px;
+        font-size: 68%;
+
+        padding: 1em 0;
+        opacity: 0;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: translate3d(10%, 0, 0);
+      }
+
+      .video-gallery .gallery-item:hover img {
+        opacity: 0.3;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .video-gallery .gallery-item .gallery-item-caption {
+        text-align: left;
+      }
+
+      .video-gallery .gallery-item h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 15%;
+        height: 1px;
+        background: #fff;
+
+        transition: transform 0.3s;
+        transform: translate3d(-100%, 0, 0);
+      }
+
+      .video-gallery .gallery-item:hover h2::after {
+        transform: translate3d(0, 0, 0);
+      }
+
+      .video-gallery .gallery-item:hover p {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+
+      @media screen and (max-width: 50em) {
+        .video-gallery .gallery-item {
+          display: inline-block;
+          float: none;
+          margin: 10px auto;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body id="1">
+    <div class="uparrow">
+      <a href="#1"><button>></button></a>
+    </div>
+
+    <nav>
+      <div class="nav-container">
+        <h1 class="nav-logo">Student Wellness Center</h1>
+        <div class="undertext">
+          <h4
+            style="
+              margin: 5px 0px 21.28px;
+              text-align: center;
+              color: #fff;
+              border: 2px solid antiquewhite;
+              display: flex;
+              justify-content: center;
+              padding: 10px;
+              border-radius: 10px;
+            "
+          >
+            Empowering students to thrive
+          </h4>
+        </div>
+
+        <div class="nav_elements">
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li>
+              <a href="./events.html">Events</a>
+              <ul class="dropdown-list">
+                <li class="dropdown-item">
+                  <a href="./happenings.html">Happenings</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="./events.html">Upcoming</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="./faqs.html">FAQs</a></li>
+            <li>
+              <a href="./gallery.html">Gallery</a>
+              <ul class="dropdown-list">
+                <li class="dropdown-item">
+                  <a href="./gallery.html">Images</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="./videos.html">Videos</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <h1 class="section-header">Video Gallery</h1>
+      <div class="section-header-underline"></div>
+      <h3 class="section-header">Awareness Videos</h3>
+      <div class="video-gallery">
+        <div class="gallery-item">
+          <img
+            src="../gallery/video-1.jpg"
+            alt="North Cascades National Park"
+          />
+          <div class="gallery-item-caption">
+            <div>
+              <h2>Break the Stigma</h2>
+              <p>Around Children's Mental Health</p>
+            </div>
+            <a class="vimeo-popup" href="https://youtu.be/49mfPFTZsHs"></a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="../gallery/video-2.jpg" alt="Mt. Rainier" />
+          <div class="gallery-item-caption">
+            <div>
+              <h2>Time</h2>
+              <p>Last Chance</p>
+            </div>
+            <a class="vimeo-popup" href="https://youtu.be/oWySXqcCcxQ"></a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="../gallery/video-3.jpg" alt="Olympic National Park" />
+          <div class="gallery-item-caption">
+            <div>
+              <h2>Confidence</h2>
+              <p>Confidence makes you stronger</p>
+            </div>
+            <a class="vimeo-popup" href="https://youtu.be/fPNZRlitmJo"></a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="../gallery/video-4.jpg" alt="Mount St. Helens" />
+          <div class="gallery-item-caption">
+            <div>
+              <h2>Team work</h2>
+              <p>The one and only</p>
+            </div>
+            <a class="vimeo-popup" href="https://youtu.be/fm1gh5GAmWc"></a>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../gallery/video-5.jpg" alt="Mount St. Helens" />
+          <div class="gallery-item-caption">
+            <div>
+              <h2>Attitude makes the difference</h2>
+              <p>Animation video on attitude</p>
+            </div>
+            <a class="vimeo-popup" href="https://youtu.be/uviKQgiw9rA"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 Student Wellness Centre. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

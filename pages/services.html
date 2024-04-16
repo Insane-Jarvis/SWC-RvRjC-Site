@@ -1,517 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Wellness Centre - Services</title>
-    <link rel="stylesheet" href="../styles/header-style.css">
+    <link rel="stylesheet" href="../styles/header-style.css" />
     <style>
-        /* Reset Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* Reset Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        /* Global Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
-            padding-top: 60px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            animation: fadeInUp 1s ease;
-        }
+      /* Global Styles */
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #333;
+        background-color: #f1e9e9;
+        padding-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
 
-        #nav_bar {
-            margin: 0px auto !important;
-        }
+      #nav_bar {
+        margin: 0px auto !important;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px;
+      }
 
-        /* Header Styles */
-        header {
-            background-color: #0072C6;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-            animation: slideInDown 1s ease;
-        }
+      /* Header Styles */
+      header {
+        background-color: #0072c6;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+      }
 
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+      header h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
 
-        header p {
-            font-size: 18px;
-        }
+      header p {
+        font-size: 18px;
+      }
 
-        /* Services Section Styles */
-        .services {
-            margin-top: 40px;
-            animation: fadeIn 1s ease;
-        }
+      /* Services Section Styles */
+      .services {
+        margin-top: 40px;
+      }
 
-        .services h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+      .services h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
 
-        .service-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-gap: 30px;
-        }
+      .service-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 30px;
+      }
 
-        .service-item {
-            background-color: #fff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            padding: 30px;
-            transition: transform 0.3s ease;
-        }
+      .service-item {
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 30px;
+        /* text-align: center; */
+        transition: transform 0.3s ease;
+      }
 
-        .service-item:hover {
-            transform: translateY(-5px);
-        }
+      .service-item:hover {
+        transform: translateY(-5px);
+      }
 
-        .service-item h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
+      .service-item h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
 
-        .service-item p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
+      .service-item p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
 
-        .service-item a,
-        .individual-counselling a {
-            display: inline-block;
-            background-color: #0072C6;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 3px;
-            transition: background-color 0.3s ease;
-        }
+      .service-item a,
+      .individual-counselling a {
+        display: inline-block;
+        background: linear-gradient(to right bottom, #fb1, #efff0e);
+        color: #1c1c84;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+      }
 
-        .service-item a:hover {
-            background-color: #005a9e;
-        }
+      .service-item a:hover {
+        background-color: #005a9e;
+      }
 
-        .services p {
-            margin: 10px auto;
-            line-height: 20px;
-        }
+      .services p {
+        margin: 10px auto;
+        line-height: 20px;
+      }
 
-        .challenges {
-            margin-top: 40px;
-            animation: fadeIn 1s ease;
-        }
+      .challenges {
+        margin-top: 40px;
+      }
 
-        .challenges h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+      .challenges h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
 
-        .challenges-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
+      .challenges-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
 
-        .challenges-list li {
-            background-color: #fff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            transition: transform 0.3s ease;
-        }
+      .challenges-list li {
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease;
+      }
 
-        .challenges-list li:hover {
-            transform: translateY(-5px);
-        }
+      .challenges-list li:hover {
+        transform: translateY(-5px);
+      }
 
-        .challenges-list li:before {
-            content: "•";
-            color: #0072C6;
-            font-size: 24px;
-            margin-right: 15px;
-        }
+      .challenges-list li:before {
+        content: "•";
+        color: #005b61;
+        font-size: 24px;
+        margin-right: 15px;
+      }
 
-        .challenges-list li p {
-            flex: 1;
-            font-size: 16px;
-        }
+      .challenges-list li p {
+        flex: 1;
+        font-size: 16px;
+      }
 
-        /* Service Offerings Section Styles */
-        .service-offerings {
-            margin-top: 40px;
-            animation: fadeIn 1s ease;
-        }
+      /* Service Offerings Section Styles */
+      .service-offerings {
+        margin-top: 40px;
+      }
 
-        .service-offerings h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+      .service-offerings h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
 
-        .individual-counselling {
-            background-color: #fff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
+      .individual-counselling {
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
 
-        .individual-counselling h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
+      .individual-counselling h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
 
-        .individual-counselling p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
+      .individual-counselling p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
 
-        .individual-counselling ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+      .individual-counselling ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
 
-        .individual-counselling ul li {
-            font-size: 16px;
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
+      .individual-counselling ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 20px;
+      }
 
-        .individual-counselling ul li:before {
-            content: "•";
-            color: #0072C6;
-            font-size: 18px;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+      .individual-counselling ul li:before {
+        content: "•";
+        color: #0072c6;
+        font-size: 18px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
 
-        /* Psychological Assessment Tests Section Styles */
-        .psychological-tests {
-            margin-top: 40px;
-            animation: fadeIn 1s ease;
-        }
+      /* Psychological Assessment Tests Section Styles */
+      .psychological-tests {
+        margin-top: 40px;
+      }
 
-        .psychological-tests h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+      .psychological-tests h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
 
-        .psychological-tests p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
+      .psychological-tests p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
 
-        /* Workshops and Events Section Styles */
-        .workshops-events {
-            margin-top: 40px;
-            animation: fadeIn 1s ease;
-        }
+      /* Workshops and Events Section Styles */
+      .workshops-events {
+        margin-top: 40px;
+      }
 
-        .workshops-events h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+      .workshops-events h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
 
-        .workshops-events p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
+      .workshops-events p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
 
-        .service-offerings>.service-item {
-            justify-content: start;
-        }
+      .service-offerings > .service-item {
+        justify-content: start;
+      }
 
-        /* Keyframe Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 30%;
+      }
 
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-100%);
-            }
+      .modal-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      .modal-content form {
+        display: flex;
+        flex-direction: column;
+      }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
+      .modal-content input,
+      .modal-content textarea {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      .modal-content button {
+        background-color: #0072c6;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .modal-content button:hover {
+        background-color: #005a9e;
+      }
+      #serv_div {
+        width: 100%;
+        height: fit-content;
+        background-color: #efefef;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 6px #0000001a;
+      }
     </style>
-</head>
+    <link rel="stylesheet" href="../styles/nav_styles.css" />
+  </head>
 
-<body>
-    <div id="nav_bar">
-        <div class="nav_elements"><a href="../index.html">Home</a></div>
-        <div class="nav_elements"><a href="./about.html">About</a></div>
-        <div class="nav_elements"><a href="./services.html">Services</a></div>
-        <div class="nav_elements"><a href="./events.html">Events</a></div>
-        <div class="nav_elements"><a href="./faqs.html">FAQs</a></div>
-        <div class="nav_elements"><a href="./gallery.html">Gallery</a></div>
+  <body id="1">
+    <div class="uparrow">
+      <a href="#1"><button>></button></a>
     </div>
-    <header>
-        <h1>Student Wellness Centre</h1>
-        <p>Empowering students to thrive</p>
-    </header>
-    <div class="container">
-        <section class="services">
-            <h2>Our Services</h2>
-            <p>
-                After securing admission at the Institute and starting your stay here, you may feel that a lot of
-                parameters around you
-                are different. You would have more responsibilities to handle at the hostel and at the academic level.
-                Take heart, you
-                will not be the only one. There are a few issues that almost everyone in the Institute faces initially
-                like academic
-                concerns, social (family and peer) pressure etc., and leading to feelings of loneliness and anxiety that
-                impacts
-                personal morale and academic performance.
-            </p>
-            <p>
-                It is important to understand that students may lose focus and subject to these pressures. If not
-                attended to at the
-                right time, this could lead to poor performance -- both academically and personally.
-            </p>
-            <p>
-                To help you refrain from losing focus and being unhappy, your Counsellor encourages you to approach for
-                any problem that
-                you are facing- be it academic, emotional, social or financial- without hesitation.
-            </p>
-            <p>
-                Counselling provides an opportunity for individuals to learn to make better choices, improve
-                interpersonal skills,
-                develop confidence and increase educational effectiveness.
-            </p>
-            <div class="service-items">
-                <div class="service-item">
-                    <h3>Individual Counselling</h3>
-                    <p>Confidential and non-judgmental support for a wide range of personal and academic challenges.</p>
-                    <a href="#challenges">Learn More</a>
-                </div>
-                <div class="service-item">
-                    <h3>Psychological Assessment Tests</h3>
-                    <p>Comprehensive assessments to help identify and address specific needs.</p>
-                    <a href="#challenges">Learn More</a>
-                </div>
-                <div class="service-item">
-                    <h3>Workshops and Events</h3>
-                    <p>Engaging programs focused on personal development, mental health, and well-being.</p>
-                    <a href="#challenges">Learn More</a>
-                </div>
-            </div>
-        </section>
-        <section class="challenges" id="challenges">
-            <h2>Possible Challenges Addressed</h2>
-            <ul class="challenges-list">
-                <li>
-                    <p>Stage fear</p>
-                </li>
-                <li>
-                    <p>Lack of motivation</p>
-                </li>
-                <li>
-                    <p>Low self-confidence</p>
-                </li>
-                <li>
-                    <p>Feeling unwell without a known reason</p>
-                </li>
-                <li>
-                    <p>Academics-related problems</p>
-                </li>
-                <li>
-                    <p>Problems related to peers</p>
-                </li>
-                <li>
-                    <p>Emotional stress and mood swings</p>
-                </li>
-                <li>
-                    <p>Placement issues</p>
-                </li>
-                <li>
-                    <p>Relationship issues</p>
-                </li>
-                <li>
-                    <p>Family issues</p>
-                </li>
-                <li>
-                    <p>Financial problems</p>
-                </li>
-                <li>
-                    <p>Decisions regarding career</p>
-                </li>
-                <li>
-                    <p>Adjusting to the new environment</p>
-                </li>
-                <li>
-                    <p>Homesickness</p>
-                </li>
-                <li>
-                    <p>Sleep disorders</p>
-                </li>
-                <li>
-                    <p>Loneliness</p>
-                </li>
-                <li>
-                    <p>Anxiety</p>
-                </li>
-                <li>
-                    <p>Time management and others</p>
-                </li>
-            </ul>
-        </section>
-        <section class="service-offerings">
-            <h2>Our Service Offerings</h2>
-            <div class="individual-counselling service-item">
-                <h3>Individual Counselling</h3>
-                <p>The Student Wellness Centre provides individual counselling to help students address a wide range of
-                    personal
-                    and academic challenges.</p>
-                <ul>
-                    <li>Students get a safe space to talk without pressure or judgment</li>
-                    <li>Confidentiality is strictly maintained</li>
-                    <li>Counsellors respect students and their problems</li>
-                    <li>Counsellors help students consider different options and make choices</li>
-                    <li>Counsellors make an attempt to reduce the problem and provide support</li>
-                    <li>Counsellors can intervene with the right people to help students if required</li>
-                </ul>
-                <p>Appointments are available from 10.00 am to 4.00 pm Monday-Saturday, and students are usually seen
-                    for 40
-                    minutes each depending on demand. Students can take an appointment by visiting the following link:
-                </p>
-                <a href="#" id="schedule-appointment">Schedule an Appointment</a>
-            </div>
-        </section>
-        <!-- Modal -->
-        <div id="appointment-modal" class="modal">
-            <div class="modal-content">
-                <h2>Schedule an Appointment</h2>
-                <form id="appointment-form">
-                    <input type="text" id="name" placeholder="Name" required>
-                    <input type="email" id="email" placeholder="Email" required>
-                    <input type="text" id="phone" placeholder="Phone" required>
-                    <textarea id="message" placeholder="Message" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+
+    <nav>
+      <div class="nav-container">
+        <h1 class="nav-logo">Student Wellness Center</h1>
+        <div class="undertext">
+          <h4
+            style="
+              margin: 5px 0px 21.28px;
+              text-align: center;
+              color: #fff;
+              border: 2px solid antiquewhite;
+              display: flex;
+              justify-content: center;
+              padding: 10px;
+              border-radius: 10px;
+            "
+          >
+            Empowering students to thrive
+          </h4>
         </div>
 
+        <div class="nav_elements">
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li>
+              <a href="./events.html">Events</a>
+              <ul class="dropdown-list">
+                <li class="dropdown-item">
+                  <a href="./happenings.html">Happenings</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="./events.html">Upcoming</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="./faqs.html">FAQs</a></li>
+            <li>
+              <a href="./gallery.html">Gallery</a>
+              <ul class="dropdown-list">
+                <li class="dropdown-item">
+                  <a href="./gallery.html">Images</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="./videos.html">Videos</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <section class="services">
+        <div id="serv_div">
+          <h2>Our Services</h2>
+          <p>
+            After securing admission at the Institute and starting your stay
+            here, you may feel that a lot of parameters around you are
+            different. You would have more responsibilities to handle at the
+            hostel and at the academic level. Take heart, you will not be the
+            only one. There are a few issues that almost everyone in the
+            Institute faces initially like academic concerns, social (family and
+            peer) pressure etc., and leading to feelings of loneliness and
+            anxiety that impacts personal morale and academic performance.
+          </p>
+          <p>
+            It is important to understand that students may lose focus and
+            subject to these pressures. If not attended to at the right time,
+            this could lead to poor performance -- both academically and
+            personally.
+          </p>
+          <p>
+            To help you refrain from losing focus and being unhappy, your
+            Counsellor encourages you to approach for any problem that you are
+            facing- be it academic, emotional, social or financial- without
+            hesitation.
+          </p>
+          <p style="margin-bottom: 40px">
+            Counselling provides an opportunity for individuals to learn to make
+            better choices, improve interpersonal skills, develop confidence and
+            increase educational effectiveness.
+          </p>
+          <div class="service-items">
+            <div class="service-item">
+              <h3>Individual Counselling</h3>
+              <p>
+                Confidential and non-judgmental support for a wide range of
+                personal and academic challenges.
+              </p>
+              <a href="#challenges">Learn More</a>
+            </div>
+            <div class="service-item">
+              <h3>Psychological Assessment Tests</h3>
+              <p>
+                Comprehensive assessments to help identify and address specific
+                needs.
+              </p>
+              <a href="#challenges">Learn More</a>
+            </div>
+            <div class="service-item">
+              <h3>Workshops and Events</h3>
+              <p>
+                Engaging programs focused on personal development, mental
+                health, and well-being.
+              </p>
+              <a href="#challenges">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="challenges" id="challenges">
+        <h2>Possible Challenges Addressed</h2>
+        <ul class="challenges-list">
+          <li>
+            <p>Stage fear</p>
+          </li>
+          <li>
+            <p>Lack of motivation</p>
+          </li>
+          <li>
+            <p>Low self-confidence</p>
+          </li>
+          <li>
+            <p>Feeling unwell without a known reason</p>
+          </li>
+          <li>
+            <p>Academics-related problems</p>
+          </li>
+          <li>
+            <p>Problems related to peers</p>
+          </li>
+          <li>
+            <p>Emotional stress and mood swings</p>
+          </li>
+          <li>
+            <p>Placement issues</p>
+          </li>
+          <li>
+            <p>Relationship issues</p>
+          </li>
+          <li>
+            <p>Family issues</p>
+          </li>
+          <li>
+            <p>Financial problems</p>
+          </li>
+          <li>
+            <p>Decisions regarding career</p>
+          </li>
+          <li>
+            <p>Adjusting to the new environment</p>
+          </li>
+          <li>
+            <p>Homesickness</p>
+          </li>
+          <li>
+            <p>Sleep disorders</p>
+          </li>
+          <li>
+            <p>Loneliness</p>
+          </li>
+          <li>
+            <p>Anxiety</p>
+          </li>
+          <li>
+            <p>Time management and others</p>
+          </li>
+        </ul>
+      </section>
+      <section class="service-offerings">
+        <h2>Our Service Offerings</h2>
+        <div class="individual-counselling service-item">
+          <h3>Individual Counselling</h3>
+          <p>
+            The Student Wellness Centre provides individual counselling to help
+            students address a wide range of personal and academic challenges.
+          </p>
+          <ul>
+            <li>
+              Students get a safe space to talk without pressure or judgment
+            </li>
+            <li>Confidentiality is strictly maintained</li>
+            <li>Counsellors respect students and their problems</li>
+            <li>
+              Counsellors help students consider different options and make
+              choices
+            </li>
+            <li>
+              Counsellors make an attempt to reduce the problem and provide
+              support
+            </li>
+            <li>
+              Counsellors can intervene with the right people to help students
+              if required
+            </li>
+          </ul>
+          <p>
+            Appointments are available from 10.00 am to 4.00 pm Monday-Saturday,
+            and students are usually seen for 40 minutes each depending on
+            demand. Students can take an appointment by visiting the following
+            link:
+          </p>
+          <a href="#" id="schedule-appointment">Schedule an Appointment</a>
+        </div>
+      </section>
+      <!-- Modal -->
+      <div id="appointment-modal" class="modal">
+        <div class="modal-content">
+          <h2>Schedule an Appointment</h2>
+          <form id="appointment-form">
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="text" id="phone" placeholder="Phone" required />
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
 
-        <section class="psychological-tests service-item">
-            <h2>Psychological Assessment Tests</h2>
-            <p>In some cases where more precise diagnoses are required, the Wellness Centre conducts psychological
-                assessment
-                tests to help identify and address specific needs.</p>
-        </section>
+      <section class="psychological-tests service-item">
+        <h2>Psychological Assessment Tests</h2>
+        <p>
+          In some cases where more precise diagnoses are required, the Wellness
+          Centre conducts psychological assessment tests to help identify and
+          address specific needs.
+        </p>
+      </section>
 
-        <section class="workshops-events service-item">
-            <h2>Workshops and Events</h2>
-            <p>The Wellness Centre organizes various workshops and events during the academic year, focusing on topics
-                related
-                to personality development, mental health, and student needs, such as emotional intelligence,
-                self-confidence,
-                stress management, and time management.</p>
-            <p>The center also organizes events on occasions like Mental Health Day, International Happiness Day, and
-                World
-                Suicide Prevention Day, to create awareness about the importance of timely interventions with a
-                counsellor for
-                quicker problem-solving.</p>
-        </section>
+      <section class="workshops-events service-item">
+        <h2>Workshops and Events</h2>
+        <p>
+          The Wellness Centre organizes various workshops and events during the
+          academic year, focusing on topics related to personality development,
+          mental health, and student needs, such as emotional intelligence,
+          self-confidence, stress management, and time management.
+        </p>
+        <p>
+          The center also organizes events on occasions like Mental Health Day,
+          International Happiness Day, and World Suicide Prevention Day, to
+          create awareness about the importance of timely interventions with a
+          counsellor for quicker problem-solving.
+        </p>
+      </section>
     </div>
 
-
     <footer>
-        <p>&copy; 2023 Student Wellness Centre. All rights reserved.</p>
+      <p>&copy; 2023 Student Wellness Centre. All rights reserved.</p>
     </footer>
     <script>
-        // Get the modal
-        var modal = document.getElementById("appointment-modal");
+      // Get the modal
+      var modal = document.getElementById("appointment-modal");
 
-        // Get the link that opens the modal
-        var btn = document.getElementById("schedule-appointment");
+      // Get the link that opens the modal
+      var btn = document.getElementById("schedule-appointment");
 
-        // Get the form element
-        var form = document.getElementById("appointment-form");
+      // Get the form element
+      var form = document.getElementById("appointment-form");
 
-        // When the user clicks the link, open the modal
-        btn.onclick = function () {
-            modal.style.display = "block";
+      // When the user clicks the link, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
         }
+      };
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+      // Submit the form via email
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-        // Submit the form via email
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
 
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById("phone").value;
-            var message = document.getElementById("message").value;
+        var body = "Name: " + name + "\n";
+        body += "Email: " + email + "\n";
+        body += "Phone: " + phone + "\n";
+        body += "Message: " + message + "\n";
 
-            var body = "Name: " + name + "\n";
-            body += "Email: " + email + "\n";
-            body += "Phone: " + phone + "\n";
-            body += "Message: " + message + "\n";
+        var mailto =
+          "mailto:wellness@rvrjc.ac.in?subject=Appointment Request&body=" +
+          encodeURIComponent(body);
+        window.location.href = mailto;
 
-            var mailto = "mailto:wellness@rvrjc.ac.in?subject=Appointment Request&body=" + encodeURIComponent(body);
-            window.location.href = mailto;
-
-            modal.style.display = "none";
-            form.reset();
-        });
+        modal.style.display = "none";
+        form.reset();
+      });
     </script>
-</body>
-
+  </body>
 </html>

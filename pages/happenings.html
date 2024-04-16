@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #333;
+        background-color: #f1e9e9;
+        padding-top: 0px;
+      }
+      .card {
+        height: 350px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        position: relative;
+        border-radius: 10px;
+      }
+
+      .remove-when-use {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        color: black;
+        font-weight: bold;
+        height: 100%;
+      }
+
+      .details > p {
+        font-size: 0.8em;
+        margin-top: 0.5em;
+      }
+
+      .details > label {
+        font-weight: bold;
+      }
+
+      .details {
+        color: white;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        position: absolute;
+        bottom: 0;
+        height: 2em;
+        transition: height 0.5s ease-in-out;
+        padding: 0.6em;
+        overflow: hidden;
+      }
+
+      .card:hover > .details {
+        height: 6.7em;
+      }
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem;
+        gap: 2rem;
+      }
+      .card img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles/nav_styles.css" />
+  </head>
+  <body id="1">
+    <div class="uparrow">
+      <a href="#1"><button>></button></a>
+    </div>
+
+    <nav>
+      <div class="nav-container">
+        <h1 class="nav-logo">Student Wellness Center</h1>
+        <div class="undertext">
+          <h4
+            style="
+              margin: 5px 0px 21.28px;
+              text-align: center;
+              color: #fff;
+              border: 2px solid antiquewhite;
+              display: flex;
+              justify-content: center;
+              padding: 10px;
+              border-radius: 10px;
+            "
+          >
+            Empowering students to thrive
+          </h4>
+        </div>
+
+        <div class="nav_elements">
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li class="dropdown">
+              <a href="#">Events</a>
+              <ul class="dropdown-list">
+                <li class="dropdown-item">
+                  <a href="./happenings.html">Happenings</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="./events.html">Upcoming</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="./faqs.html">FAQs</a></li>
+            <li>
+              <a href="./gallery.html">Gallery</a>
+              <ul class="dropdown-list">
+                <li class="dropdown-item">
+                  <a href="./gallery.html">Images</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="./videos.html">Videos</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="cards-container">
+      <div class="card">
+        <div class="remove-when-use">
+          <img src="../gallery/h-1.jpg" alt="" />
+        </div>
+        <div class="details">
+          <label>FAILURE NOT DEAD END</label>
+          <br />
+          <b>14/9/2023</b>
+          <br />
+          <p>
+            Failure is not a dead end but a stepping stone to growth and
+            success. It offers lessons, resilience, and motivation to persevere
+            towards achieving goals..
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="remove-when-use">
+          <img src="../gallery/h2.jpg" alt="" />
+        </div>
+        <div class="details">
+          <label>WORLD MENTAL HEALTH DAY</label>
+          <br />
+          <b>10/10/2023</b>
+          <p>
+            World Mental Health Day is a global initiative to raise awareness
+            about mental health issues, promote mental well-being, and advocate
+            for support and understanding for those affected.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="remove-when-use">
+          <img src="../gallery/1.jpeg" alt="" />
+        </div>
+        <div class="details">
+          <label>HAPPINESS & HOLISTIC WELLNESS</label>
+          <br />
+          <b>__/__/____</b>
+          <p>
+            Happiness is intertwined with holistic wellness, encompassing
+            physical, mental, and emotional health. It involves balance,
+            self-care, meaningful connections, and pursuing activities that
+            nourish the mind, body, and soul.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
